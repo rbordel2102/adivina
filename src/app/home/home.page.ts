@@ -7,6 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  texto: string = ''; // Texto ingresado por el usuario
+  resultado: string = ''; // Resultado del proceso
+
   constructor() {}
 
+  convierteMayusculas(): void {
+    // Convierte el texto a mayúsculas
+    this.resultado = this.texto.toUpperCase();
+  }
+
+  reinicia(): void {
+    // Reinicia los valores
+    this.texto = '';
+    this.resultado = '';
+  }
 }
